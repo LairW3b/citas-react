@@ -1,0 +1,68 @@
+QUE SON LOS REACT HOOKS O HOOKS?
+
+React cuenta con una API muy sencilla que te permite crear aplicaciones por medio de Hooks.
+Antes de ellos se tenía que crear claseses para crear y modificar el state, con los hooks no
+es necesario.
+Los Hooks se dividen en básicos y en adicionales.
+
+Categorías de Hooks
+
+useState, useEffect, useContext -> de estos los que siempre se usan son los dos primeros
+
+puedes crear tus propios hooks, separando así tu código en funciones reutilizables, obteniendo todos
+los beneficios que React ofrece.
+
+  Que es el STATE?
+
+  El estado es la parte más importante de React, básicamaente es el estado en el que se encuentra 
+  nuestra aplicación.
+
+  El state es una variable con información relevante en nuestra  aplicación, algunas veces el 
+  state pertence a un componente en especifico o algunas veces deseas compartirlo a lo largo de 
+  diferentes componentes.
+
+  el state es utilizado con la funcion useState(); y se importa de la siguiente forma:
+
+  import { useState } from "react"; //que existe en el paquete de react
+
+  la forma de usar useState:
+
+  const [cliente, setCliente] = useState({});
+      //es un destructuring de arreglos
+
+  cliente es una variable que contiene el valor del estado, setCliente es una funcion que 
+  modifica la variable cliente solo pude modificar esa ninguna otra y useState en este caso 
+  se inicia como un objeto vacio que ira modicandose conforme se ejecute nuestra aplicación. 
+  Se pueden tener multiples estados por componente.
+
+  const [total, setTotal] useState(0)
+  const [clientes, setClientes] = useState([])
+  const [modal, setModel] = useState(false)
+
+  React reacciona en base al STATE
+
+  Cada que el state cambia, tu aplicación de React va a renderizar y actualizar con esos cambios.
+  Para modificar el STATE se utiliza la funcion que extraemos cuando declaramos el estado:
+
+          const [cliente, ->>> "setTotal" <<<-] = useState({})
+
+  REGLAS PARA LOS HOOKS
+
+  *Los hooks se colocan en la parte superior de tus componentes.
+  *No se deben colocar dentro de condicionales, tampoco despues de un return
+
+  useEffect
+  siempre es un callback, que se ejecuta cuando un state cambia o cuando el componente esta listo
+
+  Es el sustituto de lo que antes esa componentDIdMount() y componentDidUpdate
+
+  Debdio a que se ejecuta automaticamente cuando el componente esta listo, es un lugar excelente para
+  colocar código para consultar una API p un localstorage
+  le podemos pasar una dependencia y estar escuchando por los cambios que sucedan en una variable, puede 
+  actualizar el componente cuando ese cambio suceda.
+
+  import {useEffect} from "react"
+
+  useEffect( () => {
+    console.log('El componente esta listo')
+  }, []);

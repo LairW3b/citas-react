@@ -1,0 +1,25 @@
+PROPS
+
+variables o funciones de otros componentes
+
+Que son?
+
+El STATE o funciones que crees en tus componentes solo estarán disponibles en ese componente.
+
+Una forma de evitar duplicar código y reutilizar variables, en otros componentes es por
+medio de Props o propiedades
+
+Los Props se pasan del padre al hijo, nunca se pueden pasar
+del hijo al padre
+
+Sintaxis
+
+  <Header 
+      nombreProp={ datos o funciones }
+  />
+puedes tener un componente por donde pase mucha información del padre al hijo
+
+Si un state va a pasar por diferentes componentes, lo mejor es colocarlo en el
+archivo principal.
+
+Cada Nivel de componentes deberá tomar y pasar el Prop hacia otros componentes.

@@ -1,0 +1,30 @@
+Sobre los Eventos en React
+
+Los eventos son camelCase, es decir en lugar de onchange es utiliza onChange,
+en lugar de onclick se utiliza onClick, todos los eventos de JS estan disponibles
+en React.
+
+A diferencia de JS y HTML, donde el nombre de la función se coloca en un string en 
+React se coloca la función tal cual.
+
+Sintaxis
+
+  HTML
+    <button onclick="descargar()">
+      Descargar
+    </button>
+
+  JSX 
+    <button onClick={ descargar() }>
+      Descargar
+    </button>
+
+  HTML
+    <from onsubmit="agregar(); return false">
+      <button type="submit">submit</button>
+    </from>
+  
+  JSX
+    <form onSubmit={ handleSubmit }>
+      <button type="submit">Añadir</button>
+    </form>
